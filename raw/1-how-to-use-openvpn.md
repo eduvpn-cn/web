@@ -1,3 +1,6 @@
+title: 如何使用openvpn
+category: Uncategoried
+---
 # 如何使用OpenVPN服务
 
 ## 一、OpenVPN服务相关信息

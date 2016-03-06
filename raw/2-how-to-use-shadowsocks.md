@@ -1,3 +1,6 @@
+title: 如何使用shadowsocks
+category: Uncategoried
+---
 # 如何使用shadowsocks
 
 shadowsocks是一个比较新的协议，相比其他方式，主要特点如下：
