@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="eduVPN">
+    <meta name="description" content="eduVPN Site">
+    <title>
+                eduVPN - openvpn with ipv6 shadowsocks anyconnect            </title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/style.css" rel="stylesheet"/>
+    <script src="/assets/highlight.min.js"></script>
+    <base target="_blank">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+                <h1><a href="/" class="logo-text" target="_self">eduVPN</a></h1>
+        <p class="lead">openvpn with ipv6 shadowsocks anyconnect</p>
+            </div>
+<div class="row">
+<!-- two columns -->
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">About</h3>
+    </div>
+    <div class="panel-body">
+        <p>This is a simple Aboutme widget.</p>
+        <p>Author: <b>eduVPN</b></p>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Navigation</h3>
+    </div>
+    <div class="panel-body">
+        <h6><a href="/" target="_self">Homepage</a></h6>
+                <h5></h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/0-which-one-to-use/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/1-how-to-use-openvpn/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/2-how-to-use-shadowsocks/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/3-how-to-connect-to-ocserv/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/README/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/SUMMARY/" target="_self">
+                                                                            </a>
+            </li>
+                    </ul>
+                        <a href="/changelog/">Changelog</a>
+            </div>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-12">
+<div class="index-content">
+<div class="row">
+<span class="label label-primary pull-right"></span>
+</div>
+<div class="row">
+<p>使用 shadowsocks</p>
+<p>shadowsocks 是一个比较新的协议，相比其他方式，主要特点如下：</p>
+<ul>
+<li>优势：效率高。</li>
+<li>劣势：默认不提供全局代理（而是提供一个 SOCKS5 代理），如果需要全局代理（比如游戏）则需要额外的设置。</li>
+</ul>
+<p><strong>考虑到效率问题，推荐 IPv4/IPv6 用户首选。</strong></p>
+<h2><a href="#一、shadowsocks_相关信息" name="一、shadowsocks_相关信息" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;一、shadowsocks 相关信息</h2>
+<p>目前 shadowsocks 采取不同用户使用不同端口的方式来避免因为单个端口流量过高而被防火墙识别阻断的问题。当前采用的加密方式为 <em>aes-128-cfb</em></p>
+<p>注意：考虑到效率问题，加密方式可能会有所变更，请注意我们的邮件或者关注此页面。</p>
+<h2><a href="#二、安装shadowsocks客户端" name="二、安装shadowsocks客户端" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;二、安装 shadowsocks 客户端</h2>
+<table>
+<thead>
+<tr><th>系统</th><th>下载链接</th><th>本站缓存</th></tr>
+</thead>
+<tbody>
+<tr><td>Windows</td><td><a href="http://sourceforge.net/projects/shadowsocksgui/">官方 sf 站点</a></td><td>Win 8 以及更新的系统：<a href="https://eduvpn.net/files/Shadowsocks-win-dotnet4.0-2.5.2.zip">Shadowsocks-win-dotnet4.0-2.5.2.zip</a> <br /> Win 7 及更早系统：<a href="https://eduvpn.net/files/Shadowsocks-win-2.5.2.zip">Shadowsocks-win-2.5.2.zip</a></td></tr>
+<tr><td>Mac OS</td><td><a href="http://sourceforge.net/projects/shadowsocksgui/">官方 sf 站点</a></td><td><a href="https://eduvpn.net/files/ShadowsocksX-2.6.3.dmg">ShadowsocksX-2.6.3.dmg</a></td></tr>
+<tr><td>Linux</td><td>直接从包管理器安装</td><td>无</td></tr>
+<tr><td>Android</td><td><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks">Google Play</a></td><td>无</td></tr>
+<tr><td>iOS</td><td><a href="https://itunes.apple.com/cn/app/shadowsocks/id665729974?mt=8">Apple App Store</a></td><td>无</td></tr>
+</tbody>
+</table>
+<h2><a href="#三、连接" name="三、连接" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;三、连接</h2>
+<p>例如:</p>
+<p>tokyo-jp.eduvpn.net</p>
+<p>your-port</p>
+<p>your-password</p>
+<p>aes-128-cfb</p>
+<p>any-comment-you-want</p>
+<p>然后点击连接即可。</p>
+<p>默认为国内地址穿透，可以在右键菜单中改为全部流量均过服务器。</p>
+<p><em>Last Update: Sat Sep 19 2015 18:39:05 GMT+0800 (中国标准时间)</em>  <a href="/raw\2-how-to-use-shadowsocks.md">Source File</a></p>
+</div>
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="footer-text">
+        <p>
+            eduVPN using <a href="https://github.com/phoenixlzx/MinoriWiki" target="_blank">MinoriWiki</a>
+        </p>
+    </div>
+</div>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

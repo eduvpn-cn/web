@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="eduVPN">
+    <meta name="description" content="eduVPN Site">
+    <title>
+                eduVPN - openvpn with ipv6 shadowsocks anyconnect            </title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/style.css" rel="stylesheet"/>
+    <script src="/assets/highlight.min.js"></script>
+    <base target="_blank">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+                <h1><a href="/" class="logo-text" target="_self">eduVPN</a></h1>
+        <p class="lead">openvpn with ipv6 shadowsocks anyconnect</p>
+            </div>
+<div class="row">
+<!-- two columns -->
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">About</h3>
+    </div>
+    <div class="panel-body">
+        <p>This is a simple Aboutme widget.</p>
+        <p>Author: <b>eduVPN</b></p>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Navigation</h3>
+    </div>
+    <div class="panel-body">
+        <h6><a href="/" target="_self">Homepage</a></h6>
+                <h5></h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/0-which-one-to-use/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/1-how-to-use-openvpn/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/2-how-to-use-shadowsocks/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/3-how-to-connect-to-ocserv/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/README/" target="_self">
+                                                                            </a>
+            </li>
+                        <li>
+                <a href="/page/SUMMARY/" target="_self">
+                                                                            </a>
+            </li>
+                    </ul>
+                        <a href="/changelog/">Changelog</a>
+            </div>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-12">
+<div class="index-content">
+<div class="row">
+<span class="label label-primary pull-right"></span>
+</div>
+<div class="row">
+<p>适合自己的链接方式</p>
+<h2><a href="#服务器列表：" name="服务器列表：" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;服务器列表：</h2>
+<p>当前服务器各种线路基本可以兼顾，所以短期内应该不会更改了。</p>
+<table>
+<thead>
+<tr><th>服务器地址</th><th>地理位置</th><th>带宽情况</th></tr>
+</thead>
+<tbody>
+<tr><td>tokyo-jp.eduvpn.net</td><td>日本 东京</td><td>100Mbps 对等。<strong>推荐通常情况下使用，IPV6 连接比 lax-us 稍慢</strong></td></tr>
+<tr><td>lax-us.eduvpn.net</td><td>美国 洛杉矶</td><td>100Mbps 对等。<strong>推荐用于 IPv6 连接和电信用户使用，IPV6 连接最优</strong></td></tr>
+<tr><td>sg.eduvpn.net</td><td>新加坡</td><td>100Mbps 对等。 <strong>电信走 CN2，主要推荐电信用户使用</strong></td></tr>
+</tbody>
+</table>
+<p>注 1：服务器相关监控，包括负载，带宽占用等，请查看：<a href="https://eduvpn.net/munin">munin</a></p>
+<h2><a href="#当前提供的连接方式对比如下：" name="当前提供的连接方式对比如下：" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;当前提供的连接方式对比如下：</h2>
+<table>
+<thead>
+<tr><th>链接名称</th><th>路由方式</th><th>是否支持国内路由穿透</th><th>IPv4/IPV6</th><th>平台支持</th><th>补充说明</th></tr>
+</thead>
+<tbody>
+<tr><td>openVPN</td><td>全局路由</td><td>通过. ovpn 指定路由表穿透</td><td>均支持</td><td>Windows, Mac OS, Linux，openwrt</td><td><strong>仅开放 IPv6 连接</strong>。</td></tr>
+<tr><td>shadowsocks</td><td>socks5 / http 代理</td><td>默认国内路由穿透</td><td>均支持</td><td>Windows, Mac OS, Linux, iOS, Android，openwrt</td><td>默认不支持全局代理，<strong>推荐 IPv4/IPv6 桌面端用户使用</strong>。</td></tr>
+<tr><td>openconnect / anyconnect</td><td>全局路由</td><td>服务器端默认国内路由穿透</td><td>仅 IPv4</td><td>Windows, Mac OS, Linux, iOS, Android</td><td>支持漫游，即网络切换时保持在线。<strong>推荐移动端用户使用</strong>。</td></tr>
+</tbody>
+</table>
+<p>注 1：PPTP，L2TP 不安全，IPsec，IKEv2 目前会被流量识别而导致服务器被阻断，不再提供。</p>
+<p>注 2：shadowsocks 默认没有开通，需要自行来邮件申请。我们也暂时不提供这两者运行在 openwrt 上的教程，请自行谷歌。</p>
+<p><strong>任何服务器速度 / 连接问题请邮件  eduvpn at gmail dot com</strong></p>
+<p><em>Last Update: Sat Sep 19 2015 19:19:58 GMT+0800 (中国标准时间)</em>  <a href="/raw\0-which-one-to-use.md">Source File</a></p>
+</div>
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="footer-text">
+        <p>
+            eduVPN using <a href="https://github.com/phoenixlzx/MinoriWiki" target="_blank">MinoriWiki</a>
+        </p>
+    </div>
+</div>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
